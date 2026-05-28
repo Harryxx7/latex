@@ -1,0 +1,17 @@
+# LaTeX auxiliary files to ignore
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.bcf
+*.xml
+*.fdb_latexmk
+*.fls
+*.synctex*
+*.pdfsync
+*~
+
+# OS metadata
+.DS_Store
