@@ -313,7 +313,8 @@ $$
 \begin{table}[ht]
   \centering
   \caption{表 4: DDM三种子模型特征与定价公式}
-  \renewcommand{\arraystretch}{1.4}
+  \renewcommand{\arraystretch}{1.5}
+      \setlength{\extrarowheight}{3pt}
 \begin{tabularx}{\textwidth}{llYY}
   \toprule
   发展阶段 & 模型名称 & 核心特征描述 & 标准定价公式 \\
@@ -963,7 +964,7 @@ $$
   \midrule
   永续固定定价 & $P_0 = \dfrac{D_1}{r_s}$ & 零增长或优先股估值 & 分清 $D_1$ 与 $D_0$ 的时点归属 \\
   永续增长估值 & $P_0 = \dfrac{D_1}{r_s - g}$ & 成熟期稳步增长股票 & 必须验证必要条件 $r_s > g$ 是否满足 \\
-  有限分段折现 & $P_0 = \sum \dfrac{D_t}{(1 + r_s)^t} + \dfrac{P_n}{(1 + r_s)^n}$ & 两阶段不规则高增长 & 终值 $P_n$ 站在第 $n$ 年末,折现时务必使用 $n$ 次方 \\
+  有限分段折现 & $P_0 = \displaystyle\sum_{t=1}^{n} \frac{D_t}{(1+r_s)^t} + \frac{P_n}{(1+r_s)^n}$ & 两阶段不规则高增长 & 终值 $P_n$ 站在第 $n$ 年末,折现时务必使用 $n$ 次方 \\
   成长增量分解 & $V_0 = \dfrac{E_1}{r_s} + NPVGO$ & 企业留存与扩张决策评估 & 零增长部分分母为盈余 $E_1$,非股利 $D_1$ \\
   可持续增长率 & $g = ROE \times b$ & 基于内部资金的可持续成长 & 前提是边际 ROE 与历史平均 ROE 一致 \\
   动态理论估值 & $P_{\text{目标}} = PE_{\text{可比}} \times EPS_{\text{目标}}$ & 乘数法相对估值 & 选取的 EPS 口径(历史/预期)必须在分子分母间保持一致 \\
