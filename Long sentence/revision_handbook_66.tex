@@ -1,5 +1,5 @@
 %!TEX program = xelatex
-\documentclass[lang=cn,11pt]{elegantbook}
+\documentclass[cn,normal,11pt]{elegantnote}
 
 % =============================================================================
 % 核心宏包加载与版面紧凑化重载 (极致省纸打印、高清晰度、绝对连贯)
@@ -11,7 +11,7 @@
 \usepackage{amssymb}    % 提供数学符号 \blacktriangleright 支持
 
 % 覆盖 ElegantBook 默认大页边距：将左右边距缩小为极高纸张利用率的 1.8cm，极大缩减打印总页数
-\geometry{a4paper, left=1.8cm, right=1.8cm, top=2.2cm, bottom=2.2cm, footskip=0.8cm}
+\geometry{a4paper, left=1.8cm, right=1.8cm, top=1.8cm, bottom=1.8cm, footskip=0.7cm}
 
 % 全局列表紧凑化设置，彻底节约纸张
 \setlist{nosep, leftmargin=2em}
@@ -33,12 +33,47 @@
 % 文档元数据
 % =============================================================================
 \title{考研英语长难句 66 句精讲全书\\{\large ——— 复习背诵与打印专版 ———}}
-\author{Harry}
-\date{}
+\author{Note Taker}
+\institute{一战成硕之句法拆解与核心词汇全攻略}
+\version{2026.05}
+\date{\today}
 
 % =============================================================================
 % 正文开始
 % =============================================================================
+
+% For note-class compatibility with elegantbook environments
+\RequirePackage{bbding}
+\RequirePackage{multicol}
+\RequirePackage[many]{tcolorbox}
+\colorlet{structurecolor}{ecolor}
+\newcommand{\introductionname}{内容概要}
+\tcbset{
+  introductionsty/.style={
+    enhanced,
+    breakable,
+    colback=structurecolor!10,
+    colframe=structurecolor,
+    fonttitle=\bfseries,
+    colbacktitle=structurecolor,
+    fontupper=\citshape,
+    attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+    boxrule=0pt,
+    toprule=0.5pt,
+    bottomrule=0.5pt,
+    top=8pt,
+    before skip=8pt,
+    sharp corners
+  },
+}
+\newenvironment{introduction}[1][\introductionname]{
+  \begin{tcolorbox}[introductionsty,title={#1}]
+    \begin{multicols}{2}
+      \begin{itemize}[label=\textcolor{structurecolor}{\SquareShadowBottomRight}]}{
+      \end{itemize}
+    \end{multicols}
+  \end{tcolorbox}}
+
 \begin{document}
 
 % 强制应用紧致行距 (1.15) 与极小段距 (1.5pt)，彻底消除松散空白，使排版行云流水
@@ -47,13 +82,13 @@
 
 \maketitle
 
-\frontmatter
+
 \tableofcontents
 
-\mainmatter
+
 
 % =============================================================================
-\chapter{考研长难句句法奠基}
+\section{考研长难句句法奠基}
 % =============================================================================
 
 \begin{introduction}
@@ -64,7 +99,7 @@
 
 在正式开启考研英语长难句的实战精读之前，我们必须对英语的**谓语分类**与**基本句型结构**有极其扎实的底层认知。谓语是任何句子的核心骨架。
 
-\section{核心句法大纲：谓语的分类}
+\subsection{核心句法大纲：谓语的分类}
 
 根据谓语动词是否具有实际语义以及其是否需要宾语，我们可以将谓语划分为三大支柱体系。
 
@@ -92,7 +127,7 @@
 \end{proposition}
 
 % =============================================================================
-\chapter{第一辑：真题长难句精讲精练}
+\section{第一辑：真题长难句精讲精练}
 % =============================================================================
 
 \begin{introduction}
@@ -108,7 +143,7 @@
 
 本辑精选了 1999 年至 2000 年考研英语真题中的 8 句经典长难句，进行深度的句法层级拆解与词汇自测。
 
-\section{第 1 句：新闻艺术报道的衰退 (1999-1)}
+\subsection{第 1 句：新闻艺术报道的衰退 (1999-1)}
 
 \begin{note}
   Of all the changes that have taken place in English-language newspapers during the past quarter-century, perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage. 【33 词】
@@ -175,7 +210,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 2 句：大都市报纸中的文艺评论 (1999-1)}
+\subsection{第 2 句：大都市报纸中的文艺评论 (1999-1)}
 
 \begin{note}
   It is difficult to the point of impossibility for the average reader under the age of forty to imagine a time when high-quality arts criticism could be found in most big-city newspapers. 【32 词】
@@ -243,7 +278,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 3 句：早期社会宗教仪式与神话 (1999-5)}
+\subsection{第 3 句：早期社会宗教仪式与神话 (1999-5)}
 
 \begin{note}
   For example, some early societies ceased to consider certain rites essential to their well-being and abandoned them; nevertheless, they retained as parts of their oral tradition the myths that had grown up around the rites and admired them for their artistic qualities rather than for their religious usefulness. 【48 词】
@@ -318,7 +353,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 4 句：20世纪最重要的报纸评论文集 (1999-5)}
+\subsection{第 4 句：20世纪最重要的报纸评论文集 (1999-5)}
 
 \begin{note}
   Yet a considerable number of the most significant collections of criticism published in the 20th century consisted in large part of newspaper reviews. 【23 词】
@@ -358,7 +393,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 5 句：二战前夕新闻纸张的廉价装饰 (1999-5)}
+\subsection{第 5 句：二战前夕新闻纸张的廉价装饰 (1999-5)}
 
 \begin{note}
   We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II, at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared. 【49 词】
@@ -422,7 +457,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 6 句：纽曼对新闻写作的讽刺性定义 (1999-5)}
+\subsection{第 6 句：纽曼对新闻写作的讽刺性定义 (1999-5)}
 
 \begin{note}
   "So few authors have brains enough or literary gift enough to keep their own end up in journalism," Newman wrote; "that I am tempted to define 'journalism' as 'a term of contempt applied by writers who are not read to writers who are.'" 【43 词】
@@ -488,7 +523,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 7 句：商业方法专利对道富银行案的限制 (2000-1)}
+\subsection{第 7 句：商业方法专利对道富银行案的限制 (2000-1)}
 
 \begin{note}
   Curbs on business-method claims would be a dramatic about-face, because it was the Federal Circuit itself that introduced such patents with its 1998 decision in the so-called State Street Bank case, approving a patent on a way of pooling mutual-fund assets. 【41 词】
@@ -546,7 +581,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 8 句：联邦巡回上诉法院的命令 (2000-1)}
+\subsection{第 8 句：联邦巡回上诉法院的命令 (2000-1)}
 
 \begin{note}
   The Federal Circuit issued an unusual order, stating that the case would be heard by all 12 of the court's judges, rather than a typical panel of three, and that one issue it wants to evaluate is whether it should "reconsider" its State Street Bank ruling. 【46 词】
@@ -604,7 +639,7 @@
 % =============================================================================
 % 第三部分：真题长难句实战进阶
 % =============================================================================
-\chapter{第二辑：真题长难句实战进阶}
+\section{第二辑：真题长难句实战进阶}
 % =============================================================================
 
 \begin{introduction}
@@ -620,7 +655,7 @@
 
 本辑精选了 2010 年考研真题（及 1990 年经典长难句）中极具学术厚度与句法难度的 8 个长难句，包含大量嵌套定语从句和并列省略考点。
 
-\section{第 9 句：引爆点中的社会流行元素 (2010-1)}
+\subsection{第 9 句：引爆点中的社会流行元素 (2010-1)}
 
 \begin{note}
   In his book The Tipping Point, Malcolm Gladwell argues that "social epidemics" are driven in large part by the action of a tiny minority of special individuals, often called influentials, who are unusually informed, persuasive, or well-connected. 【37 词】
@@ -678,7 +713,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 10 句：社会影响与名人的媒体效应 (2010-1)}
+\subsection{第 10 句：社会影响与名人的媒体效应 (2010-1)}
 
 \begin{note}
   The researchers' argument stems from a simple observation about social influence: with the exception of a few celebrities like Oprah Winfrey—whose outsized presence is primarily a function of media, not interpersonal, influence—even the most influential members of a population simply don't interact with that many others. 【48 词】
@@ -744,7 +779,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 11 句：会计准则对第三方资产评估的规定 (2010-4)}
+\subsection{第 11 句：会计准则对第三方资产评估的规定 (2010-4)}
 
 \begin{note}
   These rules say they must value some assets at the price a third party would pay, not the price managers and regulators would like them to fetch. 【27 词】
@@ -801,7 +836,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 12 句：国际会计标准委员会规则重组压力 (2010-4)}
+\subsection{第 12 句：国际会计标准委员会规则重组压力 (2010-4)}
 
 \begin{note}
   The IASB says it does not want to act without overall planning, but the pressure to fold when it completes its reconstruction of rules later this year is strong. 【29 词】
@@ -858,7 +893,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 13 句：麦克里维警告IASB政治现实真空 (2010-4)}
+\subsection{第 13 句：麦克里维警告IASB政治现实真空 (2010-4)}
 
 \begin{note}
   Charlie McCreevy, a European commissioner, warned the IASB that it did "not live in a political vacuum" but "in the real world" and that Europe could yet develop different rules. 【30 词】
@@ -918,7 +953,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 14 句：萧条市场与银行因恐亏损瘫痪 (2010-4)}
+\subsection{第 14 句：萧条市场与银行因恐亏损瘫痪 (2010-4)}
 
 \begin{note}
   And dead markets partly reflect the paralysis of banks which will not sell assets for fear of booking losses, yet are reluctant to buy all those supposed bargains. 【27 词】
@@ -984,7 +1019,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 15 句：FASB与IASB不顾集团反对整顿期权 (2010-4)}
+\subsection{第 15 句：FASB与IASB不顾集团反对整顿期权 (2010-4)}
 
 \begin{note}
   The FASB and IASB have been exactly that, cleaning up rules on stock options and pensions, for example, against hostility from special interests. 【21 词】
@@ -1042,7 +1077,7 @@
 \par\vspace{10pt}\hrule\vspace{10pt}
 
 % =============================================================================
-\section{第 16 句：丰富多样刺激因素环境对智力的开发 (1990-2)}
+\subsection{第 16 句：丰富多样刺激因素环境对智力的开发 (1990-2)}
 
 \begin{note}
   The child who is raised in an environment where there are many stimuli which develop capacity for appropriate responses will experience greater intellectual development. 【29 词】
@@ -1108,12 +1143,11 @@
 % =============================================================================
 % 附录：常用语法框架速查
 % =============================================================================
-\appendix
-\chapter{常用语法框架速查}
+\section*{附录：常用语法框架速查}
 
 为了便于您在自测和做真题时快速核对，以下为您总结了长难句中最核心的三大句法结构。
 
-\section{定语从句引导词速查}
+\subsection{定语从句引导词速查}
 \noindent
 \begin{tabularx}{\textwidth}{l X X}
   \toprule
@@ -1133,14 +1167,14 @@
   \bottomrule
 \end{tabularx}
 
-\section{被动句汉译三大核心策略}
+\subsection{被动句汉译三大核心策略}
 \begin{enumerate}
   \item \textbf{增加泛指主语} $\rightarrow$ 当原文施事者不明时，在汉语中增加“人们、我们、大家”作主动主语。
   \item \textbf{施事者明确时直接移前} $\rightarrow$ 原文出现 \textit{by...} 结构时，直接把 \textit{by} 后的施事者移到动词前作主语。
   \item \textbf{化被动为主动，调整语序} $\rightarrow$ 很多英语中的被动句在汉语中可以直接用主动句式自然流露（如“可以找到”代替“被找到”）。
 \end{enumerate}
 
-\section{分词短语作状语的类型与判定}
+\subsection{分词短语作状语的类型与判定}
 \noindent
 \begin{tabularx}{\textwidth}{l p{5cm} X}
   \toprule
