@@ -447,29 +447,28 @@
   \global\let\ELEGANT@version\relax}
 
 \def\@maketitle{%
-  \color{ecolor}
   \null
   \vskip 2em%
   \begin{center}%
     \let \footnote \thanks{%
-      \LARGE\bfseries \@title \par}%
+      {\LARGE\bfseries\color[RGB]{33,37,41}\@title} \par}%
     \vskip 1.5em {%
       \large
       \lineskip .5em%
       \begin{tabular}[t]{c}%
-        \@author
+        {\color[RGB]{79,79,79}\bfseries\@author}
       \end{tabular}\\
       \begin{tabular}[t]{c}%
-          \the\institute
+        {\color[RGB]{120,120,120}\the\institute}
       \end{tabular}\par}%
 
   \IfEmpty\version
   \else 
-    {\normalfont\citshape\versiontext\the\version \\}
+    {\normalfont\citshape\color[RGB]{150,150,150}\versiontext\the\version \\}
   \fi
 	\ifx\@date\empty
 	\else 
-    {\normalfont\citshape\updatetext\@date}%
+    {\normalfont\citshape\color[RGB]{150,150,150}\updatetext\@date}%
   \fi
   \end{center}%
   \par}
