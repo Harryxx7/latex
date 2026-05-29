@@ -1,0 +1,382 @@
+%!TEX program = xelatex
+\documentclass[cn,normal,11pt]{elegantnote}
+
+% =============================================================================
+% 核心宏包与页间控制 (极致省纸打印、高清晰度、绝对紧凑)
+% =============================================================================
+\usepackage{tabularx}   % 支持自适应多栏表格折行
+\usepackage{booktabs}   % 高级三线表，物理印刷质感极佳
+\usepackage{enumitem}   % 精细化列表行距压缩
+\usepackage{float}      % 固定表格排版
+\usepackage{amssymb}    % 提供数学符号 \blacktriangleright 支持
+
+% 覆盖模板默认页边距：将宽大的 1英寸 缩小为极高纸张利用率的 1.8cm，极大缩减打印总页数
+\geometry{a4paper, left=1.8cm, right=1.8cm, top=1.8cm, bottom=1.8cm, footskip=0.7cm}
+
+% 全局列表紧凑化设置，彻底节约纸张
+\setlist{nosep, leftmargin=2em}
+
+% =============================================================================
+% 品牌与设计规范: 严格复古色系 (深墨绿 + 铜棕)
+% =============================================================================
+\definecolor{ecolor}{RGB}{46,76,56}        % 主色调: 复古深墨绿 (Pine Green) 用于 section 与框线
+\definecolor{accentcolor}{RGB}{143,91,46}  % 辅助色: 复古铜棕色 (Copper Brown) 用于词汇高亮与强调
+
+% 核心高亮与样式宏定义
+\newcommand{\retrokey}[1]{{\color{accentcolor}\textbf{#1}}}
+\newcommand{\tips}[1]{{\color{ecolor}\textbf{#1}}}
+
+% =============================================================================
+% 文档元数据
+% =============================================================================
+\title{考研英语阅读与长难句黄金复习手册\\{\large ——— 复习背诵与打印专版 ———}}
+\author{Note Taker}
+\institute{一战成硕之阅读方法论与长难句全攻略}
+\version{2026.05}
+\date{\today}
+
+% =============================================================================
+% 正文开始
+% =============================================================================
+\begin{document}
+
+% 强制应用紧致行距 (1.15) 与极小段距 (1.5pt)，彻底消除松散空白，使排版行云流水
+\linespread{1.15}\selectfont
+\setlength{\parskip}{1.5pt}
+
+\maketitle
+
+\vspace{-10pt}
+\hrule
+\vspace{10pt}
+
+\noindent \textbf{复习指导说明}：本手册已将“考研英语阅读解题方法论”与“真题长难句精读分析卡片”合并为单份 PDF 资料。
+全书已进行**极致紧凑排版**，页边距优化为 1.8cm，英文全部统一为高品质衬线体（Times 风格，杜绝出现非统一等宽体）。本手册无任何强行换页，可将实体打印的页数压缩至最低，极其便于临考前高频反复背诵、自测与查阅。
+
+\vspace{5pt}
+\hrule
+\vspace{10pt}
+
+% =============================================================================
+% 第一部分：阅读解题方法论与核心策略
+% =============================================================================
+\begin{center}
+  {\color{ecolor} \LARGE\bfseries 第一部分：阅读解题方法论与核心策略}
+\end{center}
+\vspace{5pt}
+
+\section{拿到文章的基本策略}
+考研英语阅读的核心解题思想是\retrokey{“先题后文，精确定位”}。在动笔阅读正文之前，应当通过题干锁定核心方向。
+
+\subsection{第一步：只读题干，提取定位词}
+不要阅读选项（防止先入为主的偏见干扰），只看题干中的关键信息：
+\begin{itemize}
+  \item \textbf{绝对定位词}：大写字母、人名、地名、具体时间、年代、具体数字。
+  \item \textbf{相对定位词}：核心名词、独特的形容词。
+\end{itemize}
+
+\subsection{第二步：串联题干间逻辑，推测文章主题}
+将 5 个题干的关键词串联在一起，看它们在讨论什么共同的话题。题干之间的逻辑线通常能拼凑出文章 70\% 的主题和作者的情感立场。
+
+\section{关键信号词与解题规律}
+在正文中阅读时，信号词是句际逻辑的指示牌。考研英语阅读的正确选项几乎 100\% 隐藏在这些信号词的附近。
+
+\subsection{转折信号词 \ensuremath{\rightarrow} 转折之后是重点}
+只要出现转折，前文的论述就变成了铺垫，转折词后面的句子才是作者想要表达的真实立场，也是出题的黄金区。
+\begin{itemize}
+  \item \textbf{常规转折}：\textbf{but}, \textbf{however}。
+  \item \textbf{高频隐性转折}：\retrokey{now} 经真题反复验证，\retrokey{now} 句往往构成时间对比，引出当下最新状态，代表真题的重点。
+  \item \textbf{状态交替转折}：\retrokey{yielded to / give way to} （A 让位于 B $\rightarrow$ B 才是当下的真实状态）、\textbf{be replaced by}、\textbf{turn into}。
+\end{itemize}
+
+\begin{example}[转折定位示例 — 1997真题第52题]
+  题干要求寻找“美国 1980s 经济衰退的表现”，原文第三段出现：\\
+  \textit{“By 1987 there was only one American television maker left, Zenith. \retrokey{Now} there is none...”}\\
+  $\rightarrow$ \textbf{解析}：\textbf{now} 引出关键转折，之前还有一个，现在一个也没有了。答案正是在 \textbf{now} 之后的句子里。
+\end{example}
+
+\subsection{时间信号词 \ensuremath{\rightarrow} 时间相反，一切相反}
+\textbf{核心口诀}：时间变了，结论/状态也跟着反转。
+\begin{itemize}
+  \item \textbf{出题规律}：题干如果出现某一个特定的时间点（如 1980s），答案往往在原文**与之对立的时间**附近。
+  \item \textbf{对比结构}：原文常通过时间对比来构造隐性转折，题目考的就是对比反转后的最终结论。
+\end{itemize}
+
+\subsection{“Few + 大众观点” \ensuremath{\rightarrow} 作者真正支持的反而是答案}
+\textbf{核心规律}：大众盲目自信或存在普遍偏见，少数清醒者（作者）看到的才是真相。
+\begin{itemize}
+  \item \textbf{逻辑公式}：\textbf{Few people think X} $\rightarrow$ 大多数人不认为 X $\rightarrow$ \retrokey{作者认为 X 才是正确的}。
+  \item \textbf{警惕陷阱}：不要被 \textbf{Few} 否定词的表面所迷惑，它否定的是大众，用来反衬作者的深刻洞察。
+\end{itemize}
+
+\begin{example}[“Few”观点对比示例 — 2000真题 Text 1，54题]
+  \textbf{原文背景}：文章写于1995年，讲美国在经历1980s经济衰退后，1990s强势复苏。很多专家、学者开始极力盛赞美国的管理制度和企业结构（作者认为这是一种“盲目自信”）。\\
+  \textbf{原文关键句}：\textit{“\retrokey{Few} Americans attribute this solely to such obvious causes as a devalued dollar or \retrokey{the turning of the business cycle}.”}\\
+  $\rightarrow$ \textbf{解析}：大众都不承认经济周期的自然转折是原因（盲目归功于自身），说明作者认为“经济周期的自然转折”才是真正原因。\\
+  $\rightarrow$ \textbf{正确答案}：\textbf{[A] turning of the business cycle}。
+\end{example}
+
+\section{正确答案与干扰项特征}
+考研英语阅读的选项设计规则是高度严谨且统一的。掌握其底层特征，能够快速排除迷雾。
+
+\subsection{正确答案的三个黄金特征}
+\begin{enumerate}
+  \item \retrokey{同义改写 (含正话反说)}：正确答案不会照抄原文，而是用近义词、同义词对关键词进行替换。照抄原词的选项大概率是干扰项。\\
+  \tips{正话反说} 是最巧妙的改写方式。原文用正面/迂回表达，答案用负面/直接表达，含义百分之百等价。
+  \item \retrokey{与中心思想密切相关}：正确答案必定指向文章的主干和核心观点，而非某个孤立的细节。
+  \item \retrokey{语气缓和 (重要标志)}：含有 \textbf{some}, \textbf{may}, \textbf{partly}, \textbf{in some cases} 等词的选项，对的概率极高（高达90\%）。
+\end{enumerate}
+
+\begin{table}[H]
+  \caption{同义改写与正话反说真题解析}
+  \centering
+  \small
+  \begin{tabularx}{\textwidth}{l p{5cm} X}
+    \toprule
+    \textbf{真题来源} & \textbf{原文表达} & \textbf{正确选项 (正话反说/同义改写)} \\
+    \midrule
+    \textbf{99-1 Q53} & \textit{some courts are beginning to \retrokey{side with defendants}} & \textbf{[A] some injury claims were no longer supported by law} \\
+    \midrule
+    \textbf{99-1 Q55} & \textit{among 70-year-olds there are \retrokey{twice as many women as men}} & \textbf{[C] A lower survival rate} (男性拥有更低的存活率) \\
+    \midrule
+    \textbf{99-5 Q67} & \textit{depends \retrokey{far less} on experiments \retrokey{than on} the preparedness of minds} & \textbf{[A] Inquiring minds are more important than scientific experiments} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{干扰选项的八大典型特征}
+对于干扰项，命题人有八种经典的设障手段，复习时需烂熟于心：
+\begin{itemize}
+  \item \textbf{1. 正反混淆}：故意把原文的正面描述改写为反面描述，或者把反面改写为正面。
+  \item \textbf{2. 概念偷换}：偷换比较基准或评价对象。例如原文说“比任何竞争对手都强”，选项改成“比以前强”。
+  \item \textbf{3. 答非所问}：选项内容在原文中完全正确，但根本没有回答题干提出的那个问题。
+  \item \textbf{4. 不同内容嫁接}：将原文前段和后段不相关的词拼凑组合，拼成一个看起来非常像原话的选项。
+  \item \textbf{5. 非最佳答案}：有些选项在原文也有支撑，但仅仅是细枝末节，而最佳答案指向的是文章的核心或直接原因（考研英语必须选“最优”）。
+  \item \textbf{6. 绝对化用词 (重点警惕)}：出现 \textbf{only}, \textbf{must}, \textbf{exclusively}, \textbf{never}, \textbf{all} 等词，大概率是错的，因为学术论文的表述通常极其严谨和保留。
+  \item \textbf{7. 就事论事 (例证题克星)}：直接把例子里的具体人物、物品、事件当作答案写进选项。
+  \item \textbf{8. 主被动偷换}：混淆动作的发出者和承受者。一定要确认：\textit{是谁主动做了这件事？又是谁被动受到了影响？}
+\end{itemize}
+
+\section{标点符号的特殊妙用}
+标点符号在 LaTeX 排版中是分隔符，但在考研英语中，它们是**句法层次与逻辑关系的强力指示牌**。
+
+\subsection{逗号 (,) \ensuremath{\rightarrow} 识别“非主干”，主干快速跳读}
+\textbf{规律}：两个逗号之间，或一个逗号之后，是长难句的补充说明成分。
+\begin{itemize}
+  \item \textbf{应用}：在寻找主句主干时，夹在两个逗号之间的定语从句、分词短语或同位语应当\retrokey{先行跳过}，避免其干扰句子的核心结构。
+\end{itemize}
+
+\subsection{冒号 (:) \ensuremath{\rightarrow} 抽象到具体，答案多在冒号后}
+\textbf{规律}：冒号前后是从抽象到具体的解释关系，冒号后面的内容是前文的支撑事实。
+\begin{itemize}
+  \item \textbf{应用}：题干如果问前文某个抽象词的意思，答案直接去冒号后的具体例子中进行提炼和改写。
+\end{itemize}
+
+\subsection{分号 (;) \ensuremath{\rightarrow} 并列关系，一侧不通看另一侧}
+\textbf{规律}：分号前后的两个句子在逻辑上是完全并列平等的，语义极度相近。
+\begin{itemize}
+  \item \textbf{应用}：如果在阅读中分号前的句子结构太复杂读不懂，直接去看分号后的半句，它们表达的是同一个意思。
+\end{itemize}
+
+\subsection{引号 (" ") \ensuremath{\rightarrow} 语义转移与态度标记}
+\textbf{规律}：作者给某个词加引号，通常表示**反语**、**讽刺**或**不认同**其字面含义，代表特定评价。
+\begin{itemize}
+  \item \retrokey{反面提醒 (排阻口诀)}：\textbf{原文带引号，选项去掉了引号直接用 $\rightarrow$ 必错干扰项}。去掉引号意味着抹去了作者的反语和保留态度，含义已经发生了改变。
+\end{itemize}
+
+\section{真题例证题与解题专题}
+例证题是考研阅读中最典型的一类题型，也是就事论事干扰项最集中的地方。
+
+\subsection{如何识别例证题？}
+题干如果包含以下标志性词汇，即为典型例证题：
+\textbf{example}, \textbf{case}, \textbf{illustrate}, \textbf{demonstrate}, \textbf{to show}, \textbf{mentioned}, \textbf{prove}, \textbf{justify}，或者出现带有目的状语的不定式 \retrokey{“to + 动词原形”}。
+
+\subsection{核心解题三步法}
+\begin{enumerate}
+  \item \textbf{原则：例子本身不重要，重要的是例子所支持的观点。}
+  \item \textbf{定位定位}：例子往往出现在观点句的后面。我们需要回到例子**前面的一到两句话**去寻找它所支撑的作者观点句。
+  \item \textbf{对比选项}：答案一定是对观点句的同义改写，凡是讨论例子里人物、事物具体情节的，全是“就事论事”的干扰项，直接排除。
+\end{enumerate}
+
+\begin{example}[例证题解析 — 1999真题 Text 1，第53题]
+  \textbf{原文背景}：自 1980 年代起，陪审团开始判定公司应对消费者的意外事故承担连带责任，公司感到受到诉讼威胁，于是被迫撰写越来越长、越滑稽的警告标签。\\
+  \textbf{原文第四段}：\textit{“\retrokey{Now} the tide appears to be turning... some courts are beginning to \retrokey{side with defendants}... In May, Julie Nimmons... successfully fought a lawsuit involving a football player who was paralyzed in a game while wearing a \retrokey{Schutt helmet}.”}\\
+  \textbf{题目}：\textit{The case of Schutt helmet demonstrated that \_\_\_\_}\\
+  $\rightarrow$ \textbf{干扰排除}：\textbf{[B] helmets were not designed to prevent injuries} （就事论事，排除）。\\
+  $\rightarrow$ \textbf{正确答案}：\textbf{[A] some injury claims were no longer supported by law} （完美同义改写观点句：法院开始站在被告一边 $\rightarrow$ 部分伤害索赔不再受法律支持）。
+\end{example}
+
+\section{句子结构与特殊表达}
+掌握这两种长难句高频考点句式，有助于秒杀与之相关的阅读题目。
+
+\subsection{句首分词短语 (V-ing) \ensuremath{\rightarrow} 逻辑原因状语}
+句首的现在分词短语（例如 \textit{Feeling threatened, companies responded by...}）常表示**原因状语**（译作“因为感到受威胁，公司做出了反应……”）。读句子时先抓后面的主句主干，再补充原因。
+
+\subsection{高频虚拟表达 lest \ensuremath{\rightarrow} 意为“以免，免得”}
+\textbf{lest} 句在真题中常用来表述主语内心的担忧，表示“免得被别人认为/看作是某种负面状态”。
+
+\begin{example}[“lest”句真题解析 — 2000真题第69题]
+  \textbf{原文句}：\textit{“...people cannot confess fully to their dreams, as easily and openly as once they could, \retrokey{lest} they be thought pushing, acquisitive and vulgar.”}\\
+  $\rightarrow$ \textbf{解析}：人们不敢像过去那样公开表露梦想，\textbf{lest}（免得）被别人认为是急功近利的（pushing）、贪婪的（acquisitive）和粗俗的（vulgar）。\\
+  $\rightarrow$ \textbf{正确答案}：\textbf{[D] they do not want to appear greedy and contemptible} （同义改写）。
+\end{example}
+
+\par\vspace{15pt}\hrule\vspace{15pt}
+
+% =============================================================================
+% 第二部分：真题长难句精读与句法分析
+% =============================================================================
+\begin{center}
+  {\color{ecolor} \LARGE\bfseries 第二部分：真题长难句精读与句法分析}
+\end{center}
+\vspace{5pt}
+
+\section{Julie Nimmons 案例 (1999-1)}
+\begin{note}
+  In May, Julie Nimmons successfully fought a lawsuit involving a football player who was paralyzed in a game while wearing a Schutt helmet.
+\end{note}
+
+\subsubsection*{$\blacktriangleright$ 句法层级拆解}
+\noindent
+\begin{tabularx}{\textwidth}{p{2.8cm} X X}
+  \toprule
+  \textbf{语法成分} & \textbf{具体英文内容} & \textbf{解析与修饰关系} \\
+  \midrule
+  \textbf{主句主干} & Julie Nimmons successfully fought a lawsuit & 朱莉·尼蒙斯成功打赢了一场诉讼（标准主谓宾结构） \\
+  \midrule
+  \textbf{时间状语} & In May & 在五月份（置于句首作全句的时间背景） \\
+  \midrule
+  \textbf{后置定语} & involving a football player & 涉及一名橄榄球运动员（现在分词短语作后置定语，修饰 lawsuit） \\
+  \midrule
+  \textbf{定语从句} & who was paralyzed in a game & 他在一场比赛中瘫痪了（who 引导的定语从句，修饰 player） \\
+  \midrule
+  \textbf{时间状语从句} & while wearing a Schutt helmet & 当戴着 Schutt 头盔时（while + 分词作状语，省略了主语和系动词） \\
+  \bottomrule
+\end{tabularx}
+
+\subsubsection*{$\blacktriangleright$ 核心词汇与音标}
+\begin{itemize}
+  \item \retrokey{lawsuit} {\citshape /ˈlɔːsuːt/} \textit{n.} 诉讼，官司
+  \item \retrokey{paralyze} {\citshape /ˈpærəlaɪz/} \textit{v.} 使瘫痪，使麻痹
+  \item \retrokey{helmet} {\citshape /ˈhelmɪt/} \textit{n.} 头盔，安全帽
+\end{itemize}
+
+\subsubsection*{$\blacktriangleright$ 翻译与真题启示}
+\begin{remark}
+  \textbf{参考译文}：五月份，朱莉·尼蒙斯成功打赢了一场诉讼，该诉讼涉及一名在一场戴着 Schutt 头盔的比赛中瘫痪的橄榄球运动员。\\
+  \textbf{真题启示}：此案在原文中被用作例证，说明法院态度正在转向支持被告，伤害索赔不再能轻易获得法律支持（正话反说式考点）。
+\end{remark}
+
+\par\vspace{10pt}\hrule\vspace{10pt}
+
+\section{科学实践依赖性 (1999-5)}
+\begin{note}
+  Science, in practice, depends far less on the experiments it prepares than on the preparedness of the minds of the men who watch the experiments.
+\end{note}
+
+\subsubsection*{$\blacktriangleright$ 句法层级拆解}
+\noindent
+\begin{tabularx}{\textwidth}{p{2.8cm} X X}
+  \toprule
+  \textbf{语法成分} & \textbf{具体英文内容} & \textbf{解析与修饰关系} \\
+  \midrule
+  \textbf{主句主干} & Science depends far less on A than on B & 科学对 A 的依赖远远不如对 B 的依赖（主谓宾结构 + 比较否定结构） \\
+  \midrule
+  \textbf{插入语} & , in practice, & 在实践中（双逗号隔开，读主干时应先行跳过） \\
+  \midrule
+  \textbf{比较对象 A} & the experiments it prepares & 它所准备的实验（it prepares 定语从句修饰 experiments，省略了该引导词） \\
+  \midrule
+  \textbf{比较对象 B} & the preparedness of the minds of the men... & 观察实验的人的思维准备度（这是作者强调的真正重点） \\
+  \midrule
+  \textbf{定语从句} & who watch the experiments & 观察这些实验的人（who 引导的定语从句，后置修饰 men） \\
+  \bottomrule
+\end{tabularx}
+
+\subsubsection*{$\blacktriangleright$ 核心词汇与音标}
+\begin{itemize}
+  \item \retrokey{preparedness} {\citshape /prɪˈpeərɪdnəs/} \textit{n.} 准备状态，准备度
+  \item \retrokey{in practice} {\citshape /ɪn ˈpræktɪs/} \textit{phr.} 在实践中，实际上
+  \item \retrokey{far less... than...} {\citshape /fɑː les... ðæn/} \textit{phr.} 远远少于...，不如...
+\end{itemize}
+
+\subsubsection*{$\blacktriangleright$ 翻译与真题启示}
+\begin{remark}
+  \textbf{参考译文}：科学在实践中，对它所准备的实验的依赖，远远不如对观察这些实验的人的思维准备度的依赖。\\
+  \textbf{真题启示}：这里包含了一个经典的“比较否定”结构（far less A than B = B 远比 A 重要）。正确答案往往围绕 B（思维的准备度，即 inquiring minds）进行同义改写。
+\end{remark}
+
+\par\vspace{10pt}\hrule\vspace{10pt}
+
+\section{半导体行业危机 (2000-1)}
+\begin{note}
+  The making of semiconductors, which America had invented and which sat at the heart of the new computer age, was going to be the next casualty.
+\end{note}
+
+\subsubsection*{$\blacktriangleright$ 句法层级拆解}
+\noindent
+\begin{tabularx}{\textwidth}{p{2.8cm} X X}
+  \toprule
+  \textbf{语法成分} & \textbf{具体英文内容} & \textbf{解析与修饰关系} \\
+  \midrule
+  \textbf{主句主干} & The making of semiconductors was going to be the next casualty. & 半导体的制造将成为下一个受害者（经典主系表结构） \\
+  \midrule
+  \textbf{并列定从 1} & , which America had invented & 这一技术是美国发明的（which 引导非限制性定语从句，修饰主语） \\
+  \midrule
+  \textbf{并列定从 2} & and which sat at the heart of the new computer age, & 并且它处于新计算机时代的核心（由 and 连接的第二个非限制性定语从句） \\
+  \bottomrule
+\end{tabularx}
+
+\subsubsection*{$\blacktriangleright$ 核心词汇与音标}
+\begin{itemize}
+  \item \retrokey{semiconductor} {\citshape /ˌsemikənˈdʌktə/} \textit{n.} 半导体
+  \item \retrokey{casualty} {\citshape /ˈkæʒuəlti/} \textit{n.} 伤亡人员，受害者，牺牲品
+  \item \retrokey{sit at the heart of} \textit{phr.} 处于...的核心位置
+\end{itemize}
+
+\subsubsection*{$\blacktriangleright$ 翻译与真题启示}
+\begin{remark}
+  \textbf{参考译文}：曾由美国发明并处于新计算机时代核心地位的半导体制造业，将成为下一个受害者。\\
+  \textbf{真题启示}：双逗号之间的两个 which 引导并列定语从句修饰主语。长难句中双逗号夹住的成分为解释性定语，读句子时直奔主干有助于快速解题。
+\end{remark}
+
+\par\vspace{10pt}\hrule\vspace{10pt}
+
+\section{所谓“科学”神创论 (1996-5)}
+\begin{note}
+  "Scientific" creationism, which is being pushed by some for "equal time" in the classroom, is based on religion, not science.
+\end{note}
+
+\subsubsection*{$\blacktriangleright$ 句法层级拆解}
+\noindent
+\begin{tabularx}{\textwidth}{p{2.8cm} X X}
+  \toprule
+  \textbf{语法成分} & \textbf{具体英文内容} & \textbf{解析与修饰关系} \\
+  \midrule
+  \textbf{主句主干} & "Scientific" creationism is based on religion, not science. & 所谓的“科学”神创论是基于宗教，而非科学（主系表结构 + 否定并列） \\
+  \midrule
+  \textbf{定语从句} & , which is being pushed by some for "equal time" in the classroom, & 被一些人极力推进以获得在课堂上的“同等时间”（which 引导非限制性定语从句修饰主语） \\
+  \bottomrule
+\end{tabularx}
+
+\subsubsection*{$\blacktriangleright$ 核心词汇与音标}
+\begin{itemize}
+  \item \retrokey{creationism} {\citshape /kriˈeɪʃənɪzəm/} \textit{n.} 神创论（认为上帝创造宇宙万物的学说）
+  \item \retrokey{equal time} \textit{phr.} 同等时间，平等对待的时间（指对立观点的同等陈述时间）
+  \item \retrokey{be based on} \textit{phr.} 基于...，建立在...基础上
+\end{itemize}
+
+\subsubsection*{$\blacktriangleright$ 翻译与真题启示}
+\begin{remark}
+  \textbf{参考译文}：被一些人极力推崇以获得课堂上“同等时间”的所谓“科学”神创论，其基础是宗教，而非科学。\\
+  \textbf{真题启示}：注意 "Scientific" 上的双引号，这是作者的语意讽刺。真题选项如果去掉了双引号直接当作正常科学来论述，则是典型的“去掉引号”干扰项。
+\end{remark}
+
+\vspace{10pt}
+\hrule
+\vspace{5pt}
+
+\begin{center}
+  \footnotesize \tips{手记终} —— 祝考研学子笔耕不辍，终克难关！
+\end{center}
+
+\end{document}
