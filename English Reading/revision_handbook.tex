@@ -19,12 +19,15 @@
 % =============================================================================
 % 品牌与设计规范: 严格复古色系 (深墨绿 + 铜棕)
 % =============================================================================
-\definecolor{ecolor}{RGB}{0,110,85}        % 主色调: 高对比森林绿 (Forest Teal Green) 用于 section 与框线，清晰好认
+\definecolor{ecolor}{RGB}{0,128,64}        % 主色调: 优雅常春藤绿 (Vibrant Ivy Green) 用于 section 与框线，高清晰度学术绿
 \definecolor{accentcolor}{RGB}{195,95,35}  % 辅助色: 高对比珊瑚铜 (Terracotta Orange) 用于词汇高亮与强调，一眼即亮
 
 % 核心高亮与样式宏定义
 \newcommand{\retrokey}[1]{{\color{accentcolor}\textbf{#1}}}
 \newcommand{\tips}[1]{{\color{ecolor}\textbf{#1}}}
+
+% 解决 XeLaTeX 下音标字符在默认 Roman 字体中缺失的警告，切换为 Arial 渲染音标
+\renewcommand{\citshape}{\kaishu\fontspec{Arial}}
 
 % =============================================================================
 % 文档元数据
